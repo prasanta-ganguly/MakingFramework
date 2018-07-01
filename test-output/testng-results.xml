@@ -1,17 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="2" failed="1" total="3" passed="0">
+<testng-results skipped="0" failed="1" total="3" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="9604" started-at="2018-06-30T08:35:47Z" finished-at="2018-06-30T08:35:56Z">
+  <suite name="Suite" duration-ms="13136" started-at="2018-07-01T01:11:19Z" finished-at="2018-07-01T01:11:32Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="9604" started-at="2018-06-30T08:35:47Z" finished-at="2018-06-30T08:35:56Z">
+    <test name="Test" duration-ms="13136" started-at="2018-07-01T01:11:19Z" finished-at="2018-07-01T01:11:32Z">
       <class name="com.testcases.Login">
-        <test-method status="PASS" signature="openBrowser()[pri:0, instance:com.testcases.Login@26be92ad]" name="openBrowser" is-config="true" duration-ms="4992" started-at="2018-06-30T14:05:47Z" finished-at="2018-06-30T14:05:52Z">
+        <test-method status="PASS" signature="openBrowser()[pri:0, instance:com.testcases.Login@548e7350]" name="openBrowser" is-config="true" duration-ms="5002" started-at="2018-07-01T06:41:19Z" finished-at="2018-07-01T06:41:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBrowser -->
-        <test-method status="FAIL" signature="launchSite()[pri:0, instance:com.testcases.Login@26be92ad]" name="launchSite" duration-ms="2883" started-at="2018-06-30T14:05:52Z" finished-at="2018-06-30T14:05:55Z">
+        <test-method status="PASS" signature="launchSite()[pri:0, instance:com.testcases.Login@548e7350]" name="launchSite" duration-ms="1361" started-at="2018-07-01T06:41:24Z" finished-at="2018-07-01T06:41:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchSite -->
+        <test-method status="PASS" signature="login()[pri:0, instance:com.testcases.Login@548e7350]" name="login" duration-ms="4013" started-at="2018-07-01T06:41:25Z" depends-on-methods="com.testcases.Login.launchSite" finished-at="2018-07-01T06:41:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="FAIL" signature="logout()[pri:0, instance:com.testcases.Login@548e7350]" name="logout" duration-ms="1224" started-at="2018-07-01T06:41:29Z" depends-on-methods="com.testcases.Login.launchSite, com.testcases.Login.login" finished-at="2018-07-01T06:41:30Z">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [false] but found [true]]]>
@@ -23,7 +31,7 @@
 	at org.testng.Assert.assertEquals(Assert.java:123)
 	at org.testng.Assert.assertEquals(Assert.java:286)
 	at org.testng.Assert.assertEquals(Assert.java:296)
-	at com.testcases.Login.launchSite(Login.java:36)
+	at com.testcases.Login.logout(Login.java:54)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -53,24 +61,16 @@
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- launchSite -->
-        <test-method status="SKIP" signature="logout()[pri:0, instance:com.testcases.Login@26be92ad]" name="logout" duration-ms="0" started-at="2018-06-30T14:05:55Z" depends-on-methods="com.testcases.Login.launchSite, com.testcases.Login.login" finished-at="2018-06-30T14:05:55Z">
-          <reporter-output>
-          </reporter-output>
         </test-method> <!-- logout -->
-        <test-method status="SKIP" signature="login()[pri:0, instance:com.testcases.Login@26be92ad]" name="login" duration-ms="0" started-at="2018-06-30T14:05:55Z" depends-on-methods="com.testcases.Login.launchSite" finished-at="2018-06-30T14:05:55Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- login -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.testcases.Login@26be92ad]" name="tearDown" is-config="true" duration-ms="760" started-at="2018-06-30T14:05:55Z" finished-at="2018-06-30T14:05:56Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.testcases.Login@548e7350]" name="tearDown" is-config="true" duration-ms="697" started-at="2018-07-01T06:41:31Z" finished-at="2018-07-01T06:41:32Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="endReport()[pri:0, instance:com.testcases.Login@26be92ad]" name="endReport" is-config="true" duration-ms="294" started-at="2018-06-30T14:05:56Z" finished-at="2018-06-30T14:05:56Z">
+        <test-method status="PASS" signature="endReport()[pri:0, instance:com.testcases.Login@548e7350]" name="endReport" is-config="true" duration-ms="253" started-at="2018-07-01T06:41:32Z" finished-at="2018-07-01T06:41:32Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endReport -->
       </class> <!-- com.testcases.Login -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>
